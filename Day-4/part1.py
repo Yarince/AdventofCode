@@ -2,7 +2,7 @@ from itertools import cycle
 
 with open("input.txt") as f:
     content = f.readlines()
-# you may also want to remove whitespace characters like `\n` at the end of each line
+
 content = [row.strip() for row in content]
 content = [word.split() for word in content]
 
