@@ -18,5 +18,5 @@ while i <= len(jumps):
     if i >= len(jumps):
         break
 
-print("Ammount of steps: ", steps)
+print("Amount of steps: ", steps)
 print("Lol it took", time.time() - start_time, " seconds to run")

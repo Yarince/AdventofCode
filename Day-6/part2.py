@@ -54,9 +54,9 @@ while not found:
     total_iterations += 1
 
 total_cycles = 0
-for iters, bank in checked_banks.items():
-    if bank == new_bank and iters != iterations:
-        total_cycles = iterations - int(iters)
+for iter_count, bank in checked_banks.items():
+    if bank == new_bank and iter_count != iterations:
+        total_cycles = iterations - int(iter_count)
 
 print("Answer is %i iteration" % total_cycles)
 print("Answer is %i iterations " % iterations)

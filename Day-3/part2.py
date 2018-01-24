@@ -23,25 +23,25 @@ def print_array():
     print("----------------")
 
 
-def check_right(x, y):
+def check_right(x):
     global array
     new_x = x + 1
     return new_x != len(array)
 
 
-def check_up(x, y):
+def check_up(y):
     global array
     new_y = y - 1
     return not new_y < 0
 
 
-def check_left(x, y):
+def check_left(x):
     global array
     new_x = x - 1
     return new_x >= 0
 
 
-def check_down(x, y):
+def check_down(y):
     global array
     new_y = y + 1
     return new_y != len(array[0])
@@ -72,19 +72,19 @@ def down_empty(x, y):
 
 
 def check_right_up(x, y):
-    return check_right(x, y) and check_up(x, y)
+    return check_right(x) and check_up(y)
 
 
 def check_left_up(x, y):
-    return check_left(x, y) and check_up(x, y)
+    return check_left(x) and check_up(y)
 
 
 def check_right_down(x, y):
-    return check_right(x, y) and check_down(x, y)
+    return check_right(x) and check_down(y)
 
 
 def check_left_down(x, y):
-    return check_left(x, y) and check_down(x, y)
+    return check_left(x) and check_down(y)
 
 
 def move(direct):
