@@ -6,11 +6,11 @@ public class Solution
 {
     static private IEnumerable<(char, int)> input = Solution.CharIntTuple(Runner.Runner.GetNormalizedInput("Day2/input.in"));
 
-    static void Main(string[] args)
-    {
-        Console.WriteLine(PartOne());
-        Console.WriteLine(PartTwo());
-    }
+    // static void Main(string[] args)
+    // {
+    //     Console.WriteLine(PartOne());
+    //     Console.WriteLine(PartTwo());
+    // }
 
     static int PartOne()
     {
