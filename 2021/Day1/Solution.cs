@@ -6,11 +6,11 @@ public class Solution
 {
     static private IEnumerable<int> input = Solution.Numbers(Runner.Runner.GetNormalizedInput("Day1/input.in"));
 
-    static void Main(string[] args)
-    {
-        Console.WriteLine(PartOne);
-        Console.WriteLine(PartTwo);
-    }
+    // static void Main(string[] args)
+    // {
+    //     Console.WriteLine(PartOne);
+    //     Console.WriteLine(PartTwo());
+    // }
 
     static int PartOne => Solution.input.Zip(Solution.input.Skip(1), (a, b) => a < b ? 1 : 0).Sum();
 
