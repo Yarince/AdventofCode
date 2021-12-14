@@ -1,4 +1,5 @@
-﻿using Runner;
+﻿using System.Collections;
+using Runner;
 
 namespace Day3;
 
@@ -18,6 +19,10 @@ public class Solution
 
         var oneBits = new int[depth];
 
+        Solution.input.Select(r=> r.Where(b=> b == '1').Count());
+
+        // count ammount of positive bits found
+        // Should be optimized, but can't think of a solution atm
         for (int i = 0; i < total; i++)
         {
             for (int j = 0; j < depth; j++)
@@ -27,11 +32,11 @@ public class Solution
             }
         }
 
-        var gammaBit = oneBits.Select(c=> c < total/2 ? '1' : '0').ToArray();
-        var gammaInt = Convert.ToInt32(new string(gammaBit), 2);
+        var gammaBit = oneBits.Select(c=> c < total/2 ? '1' : '0');
+        var gammaInt = Convert.ToInt32(new string(gammaBit.ToArray()), 2);
         var epsilonInt = Convert.ToInt32(new string(gammaBit.Select(g => g == '1' ? '0' : '1').ToArray()), 2);
-        var res = gammaInt * epsilonInt; ;
-        return res;
+    
+        return gammaInt * epsilonInt;
     }
 
     // parse input to array of numbers
